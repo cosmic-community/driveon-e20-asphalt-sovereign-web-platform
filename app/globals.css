@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --asphalt: #0C0C0C;
+    --asphalt-card: #111213;
+    --driveon-green: #34D07C;
+    --driveon-amber: #FFB64D;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B9B9B9;
+  }
+
+  body {
+    @apply bg-asphalt text-text-primary font-sans;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-driveon-green text-white font-semibold px-6 py-3 rounded-xl hover:bg-green-600 transition-colors duration-200 text-center;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-driveon-green text-driveon-green font-semibold px-6 py-3 rounded-xl hover:bg-driveon-green hover:text-white transition-colors duration-200 text-center;
+  }
+
+  .card {
+    @apply bg-asphalt-card rounded-xl p-6 shadow-card;
+  }
+
+  .prose {
+    @apply text-text-secondary leading-relaxed;
+  }
+
+  .prose h1, .prose h2, .prose h3, .prose h4 {
+    @apply text-text-primary mt-6 mb-4;
+  }
+
+  .prose p {
+    @apply mb-4;
+  }
+
+  .prose ul, .prose ol {
+    @apply ml-6 mb-4;
+  }
+
+  .prose li {
+    @apply mb-2;
+  }
+
+  .prose strong {
+    @apply text-driveon-green font-semibold;
+  }
+
+  .prose a {
+    @apply text-driveon-green hover:text-green-400 underline;
+  }
+
+  .prose code {
+    @apply bg-asphalt-card px-2 py-1 rounded text-sm;
+  }
+}
